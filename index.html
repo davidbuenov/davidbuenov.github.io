@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Bueno Vallejo | Portafolio Profesional</title>
+  <meta name="description" content="Doctor en Informática, Profesor de la UMA, Instructor Autorizado de Unreal Engine (Gold) y Especialista en Inteligencia Artificial Generativa. Explorando la intersección entre datos, videojuegos e IA.">
+  
+  <!-- Google Fonts: Outfit (modern titles) & Inter (clean reading text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Interactive Particle Web -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="glass-nav">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">DBV</span>.dev
+      </a>
+      <nav class="nav-links">
+        <a href="#inicio" class="active" data-es='<i class="fa-solid fa-house"></i> Inicio' data-en='<i class="fa-solid fa-house"></i> Home'><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="#sobre-mi" data-es='<i class="fa-solid fa-user"></i> Sobre Mí' data-en='<i class="fa-solid fa-user"></i> About'><i class="fa-solid fa-user"></i> Sobre Mí</a>
+        <a href="#proyectos" data-es='<i class="fa-solid fa-code"></i> Proyectos' data-en='<i class="fa-solid fa-code"></i> Projects'><i class="fa-solid fa-code"></i> Proyectos</a>
+        <a href="#contacto" data-es='<i class="fa-solid fa-envelope"></i> Contacto' data-en='<i class="fa-solid fa-envelope"></i> Contact'><i class="fa-solid fa-envelope"></i> Contacto</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Language Switcher Visual -->
+        <div class="lang-switcher-visual">
+          <button class="lang-btn-visual active" data-lang="es" title="Español">
+            <span class="flag-emoji">🇪🇸</span> <span class="lang-code">ES</span>
+          </button>
+          <button class="lang-btn-visual" data-lang="en" title="English">
+            <span class="flag-emoji">🇬🇧</span> <span class="lang-code">EN</span>
+          </button>
+        </div>
+
+        <div class="nav-social-shortcuts">
+          <a href="https://davidbuenov.com" target="_blank" title="Web Personal"><i class="fa-solid fa-globe"></i></a>
+          <a href="https://www.youtube.com/@davidbuenov" target="_blank" title="Canal de YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <button class="mobile-nav-toggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <div class="badge-container">
+        <span class="hero-badge" data-es='<i class="fa-solid fa-graduation-cap"></i> Doctor en Informática' data-en='<i class="fa-solid fa-graduation-cap"></i> PhD in Computer Engineering'><i class="fa-solid fa-graduation-cap"></i> Doctor en Informática</span>
+        <span class="hero-badge" data-es='<i class="fa-solid fa-medal"></i> Premio IA Ayuntamiento de Madrid 2024' data-en='<i class="fa-solid fa-medal"></i> Madrid IA Award 2024'><i class="fa-solid fa-medal"></i> Premio IA Ayuntamiento de Madrid 2024</span>
+        <span class="hero-badge" data-es='<i class="fa-solid fa-gamepad"></i> Unreal Engine Instructor Gold' data-en='<i class="fa-solid fa-gamepad"></i> Unreal Engine Gold Instructor'><i class="fa-solid fa-gamepad"></i> Unreal Engine Instructor Gold</span>
+      </div>
+      <h1 class="hero-title">David Bueno Vallejo</h1>
+      <p class="hero-subtitle" 
+         data-es="Doctor en Ingeniería Informática y Profesor de la UMA. Liderazgo IT híbrido: fusionando el rigor de la <span class='highlight-text data-color'>Ciencia de Datos</span>, el poder interactivo de <span class='highlight-text ue-color'>Unreal Engine</span> y la autonomía de los <span class='highlight-text ai-color'>Agentes de IA</span>."
+         data-en="PhD in Computer Engineering and Associate Professor at UMA. Hybrid IT leadership: merging the rigor of <span class='highlight-text data-color'>Data Science</span>, the interactive power of <span class='highlight-text ue-color'>Unreal Engine</span>, and the autonomy of <span class='highlight-text ai-color'>AI Agents</span>.">
+        Doctor en Ingeniería Informática y Profesor de la UMA. Liderazgo IT híbrido: fusionando el rigor de la <span class="highlight-text data-color">Ciencia de Datos</span>, el poder interactivo de <span class="highlight-text ue-color">Unreal Engine</span> y la autonomía de los <span class="highlight-text ai-color">Agentes de IA</span>.
+      </p>
+      <div class="hero-ctas">
+        <a href="#proyectos" class="btn btn-primary" data-es='Ver Proyectos <i class="fa-solid fa-arrow-right"></i>' data-en='View Projects <i class="fa-solid fa-arrow-right"></i>'>Ver Proyectos <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contacto" class="btn btn-secondary" data-es='Contactar <i class="fa-solid fa-envelope"></i>' data-en='Contact Me <i class="fa-solid fa-envelope"></i>'>Contactar <i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <p data-es="Explorar" data-en="Explore">Explorar</p>
+      <div class="mouse-icon">
+        <div class="mouse-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="sobre-mi" class="about-section container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Perfil" data-en="Profile">Perfil</span>
+      <h2 class="section-title" data-es="Trayectoria y Experiencia" data-en="Trajectory & Experience">Trayectoria y Experiencia</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="metrics-grid">
+      <div class="metric-card glass-card">
+        <span class="metric-number" data-es="10 Años" data-en="10 Years">10 Años</span>
+        <span class="metric-label" data-es="CIO Ayuntamiento de Málaga" data-en="Malaga City Council CIO">CIO Ayuntamiento de Málaga</span>
+      </div>
+      <div class="metric-card glass-card">
+        <span class="metric-number">27+</span>
+        <span class="metric-label" data-es="Contratos OTRI firmados (I+D)" data-en="OTRI R&D Contracts Signed">Contratos OTRI firmados (I+D)</span>
+      </div>
+      <div class="metric-card glass-card">
+        <span class="metric-number">400k+ €</span>
+        <span class="metric-label" data-es="Recursos Industriales Gestionados" data-en="Managed Industrial Resources">Recursos Industriales Gestionados</span>
+      </div>
+      <div class="metric-card glass-card">
+        <span class="metric-number">28+</span>
+        <span class="metric-label" data-es="Premios Smart Cities y Datos" data-en="Smart Cities & Data Awards">Premios Smart Cities y Datos</span>
+      </div>
+      <div class="metric-card glass-card">
+        <span class="metric-number">1</span>
+        <span class="metric-label" data-es="Patente Concedida (Extensión PCT)" data-en="Granted Patent (PCT Extension)">Patente Concedida (Extensión PCT)</span>
+      </div>
+      <div class="metric-card glass-card">
+        <span class="metric-number">700+</span>
+        <span class="metric-label" data-es="Alumnos en IA Estratégica UMA" data-en="UMA Strategic AI Students">Alumnos en IA Estratégica UMA</span>
+      </div>
+    </div>
+
+    <div class="about-grid" style="margin-top: 40px;">
+      <!-- Biography Card -->
+      <div class="about-bio-card glass-card">
+        <div class="avatar-wrapper">
+          <img src="https://avatars.githubusercontent.com/u/16258808?v=4" alt="David Bueno Vallejo" class="profile-avatar">
+          <div class="avatar-glow"></div>
+        </div>
+        <h3>David Bueno Vallejo, PhD</h3>
+        <p class="bio-text" 
+           data-es="Doctor Ingeniero en Informática (2003) y Profesor Titular en el Departamento de Lenguajes y Ciencias de la Computación de la <strong>Universidad de Málaga (UMA)</strong>. Con un perfil híbrido de alto impacto, he combinado investigación académica de vanguardia en IA con la dirección tecnológica pública y la transferencia tecnológica directa a la industria."
+           data-en="PhD in Computer Engineering (2003) and Associate Professor in the Department of Computer Science at the <strong>University of Malaga (UMA)</strong>. With a high-impact hybrid profile, I have successfully merged cutting-edge academic research in AI with high-level public technology management and direct technology transfer to the industrial sector.">
+          Doctor Ingeniero en Informática (2003) y Profesor Titular en el Departamento de Lenguajes y Ciencias de la Computación de la <strong>Universidad de Málaga (UMA)</strong>. Con un perfil híbrido de alto impacto, he combinado investigación académica de vanguardia en IA con la dirección tecnológica pública y la transferencia tecnológica directa a la industria.
+        </p>
+        <p class="bio-text" 
+           data-es="Soy coinventor de una patente concedida (ES2393017 B1) y he realizado estancias de investigación en el centro LORIA/INRIA (Francia), actuando además como evaluador experto para la Comisión Europea."
+           data-en="I am a co-inventor of a granted industrial patent (ES2393017 B1) and have conducted research stays at the LORIA/INRIA center (France), also serving as an Expert Evaluator for the European Commission.">
+          Soy coinventor de una patente concedida (ES2393017 B1) y he realizado estancias de investigación en el centro LORIA/INRIA (Francia), actuando además como evaluador experto para la Comisión Europea.
+        </p>
+        <div class="social-links-row">
+          <a href="https://github.com/davidbuenov" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/davidbueno/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://davidbuenov.com" target="_blank" title="Web Personal"><i class="fa-solid fa-globe"></i></a>
+          <a href="https://www.youtube.com/@davidbuenov" target="_blank" title="Canal de YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.uma.es" target="_blank" title="Universidad de Málaga"><i class="fa-solid fa-building-columns"></i></a>
+        </div>
+      </div>
+
+      <!-- Experience Columns -->
+      <div class="experience-showcase">
+        <div class="exp-card glass-card">
+          <div class="exp-icon-box academic-bg">
+            <i class="fa-solid fa-university"></i>
+          </div>
+          <div class="exp-details">
+            <span class="exp-date" data-es="2003 - Presente" data-en="2003 - Present">2003 - Presente</span>
+            <h4 data-es="Docencia de Excelencia e Investigación en IA" data-en="Excellent Teaching & AI Research">Docencia de Excelencia e Investigación en IA</h4>
+            <span class="exp-inst" data-es="Universidad de Málaga (UMA)" data-en="University of Malaga (UMA)">Universidad de Málaga (UMA)</span>
+            <p data-es="Docencia calificada como 'Excelente' de forma continua en el programa Docentia UMA durante la última década. Diseñador de planes formativos clave en Inteligencia Artificial Generativa y consultoría estratégica para COSITAL y el personal de la UMA (curso con más de 700 matriculados). Galardonado con el Premio UMA Spin-Off (2021)."
+               data-en="Teaching consistently rated as 'Excellent' in the Docentia quality assessment program at UMA over the last decade. Designer of key training programs in Generative AI and strategic consultancy for COSITAL and UMA staff (course with over 700 students enrolled). Awarded the UMA Spin-Off Award (2021).">Docencia calificada como 'Excelente' de forma continua en el programa Docentia UMA durante la última década. Diseñador de planes formativos clave en Inteligencia Artificial Generativa y consultoría estratégica para COSITAL y el personal de la UMA (curso con más de 700 matriculados). Galardonado con el Premio UMA Spin-Off (2021).</p>
+          </div>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-icon-box ue-bg">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <div class="exp-details">
+            <span class="exp-date" data-es="Certificado Epic Games" data-en="Epic Games Certified">Certificado Epic Games</span>
+            <h4 data-es="Instructor Autorizado Unreal Engine (Gold)" data-en="Authorized Unreal Engine Instructor (Gold)">Instructor Autorizado Unreal Engine (Gold)</h4>
+            <span class="exp-inst" data-es="Epic Games Academy y Comunidad Dev de Málaga" data-en="Epic Games Academy & Malaga Dev Community">Epic Games Academy y Comunidad Dev de Málaga</span>
+            <p data-es="Especialista e instructor oficial en desarrollo de videojuegos 3D, Realidad Virtual (Meta Quest 3), Meta-humanos y producción virtual. Coordinador de la comunidad de desarrolladores de Unreal Engine en Málaga."
+               data-en="Official specialist and instructor in 3D game development, Virtual Reality (Meta Quest 3), Meta-humans, and virtual production. Coordinator of the Unreal Engine developer community in Malaga.">Especialista e instructor oficial en desarrollo de videojuegos 3D, Realidad Virtual (Meta Quest 3), Meta-humanos y producción virtual. Coordinador de la comunidad de desarrolladores de Unreal Engine en Málaga.</p>
+          </div>
+        </div>
+
+        <div class="exp-card glass-card">
+          <div class="exp-icon-box cio-bg">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="exp-details">
+            <span class="exp-date" data-es="10 años (2011 - 2021)" data-en="10 years (2011 - 2021)">10 años (2011 - 2021)</span>
+            <h4 data-es="Director de Tecnología / CIO e Innovación" data-en="Chief Information Officer / CIO & Innovation">Director de Tecnología / CIO e Innovación</h4>
+            <span class="exp-inst" data-es="Ayuntamiento de Málaga & CEMI" data-en="Malaga City Council & CEMI">Ayuntamiento de Málaga & CEMI</span>
+            <p data-es="Liderazgo de proyectos que convirtieron a Málaga en referente internacional de Smart Cities y Open Data (+900 datasets). Logrando más de 28 premios internacionales, como el CIONET Digital Excellence Award y el galardón CNIS. Creador del chatbot interactivo 3D pionero con IA 'Victoria la Malagueña'."
+               data-en="Led technology projects that made Malaga an international benchmark in Smart Cities and Open Data (+900 datasets). Achieved more than 28 international awards, including the CIONET Digital Excellence Award and CNIS recognition. Developer of the pioneer AI 3D chatbot avatar 'Victoria la Malagueña'.">Liderazgo de proyectos que convirtieron a Málaga en referente internacional de Smart Cities y Open Data (+900 datasets). Logrando más de 28 premios internacionales, como el CIONET Digital Excellence Award y el galardón CNIS. Creador del chatbot interactivo 3D pionero con IA 'Victoria la Malagueña'.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="proyectos" class="projects-section container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Portafolio" data-en="Portfolio">Portafolio</span>
+      <h2 class="section-title" data-es="Proyectos en GitHub" data-en="Projects on GitHub">Proyectos en GitHub</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Filter Navigation -->
+    <div class="project-filters glass-card">
+      <button class="filter-btn active" data-filter="all" data-es='Todos <span class="filter-count" id="count-all">0</span>' data-en='All <span class="filter-count" id="count-all-en">0</span>'>Todos <span class="filter-count" id="count-all">0</span></button>
+      <button class="filter-btn" data-filter="ai" data-es='🤖 IA & Agentes <span class="filter-count" id="count-ai">0</span>' data-en='🤖 AI & Agents <span class="filter-count" id="count-ai-en">0</span>'>🤖 IA & Agentes <span class="filter-count" id="count-ai">0</span></button>
+      <button class="filter-btn" data-filter="unreal" data-es='🎮 Unreal Engine & VR <span class="filter-count" id="count-unreal">0</span>' data-en='🎮 Unreal & VR <span class="filter-count" id="count-unreal-en">0</span>'>🎮 Unreal Engine & VR <span class="filter-count" id="count-unreal">0</span></button>
+      <button class="filter-btn" data-filter="tools" data-es='💼 Automatización & Web <span class="filter-count" id="count-tools">0</span>' data-en='💼 Automation & Web <span class="filter-count" id="count-tools-en">0</span>'>💼 Automatización & Web <span class="filter-count" id="count-tools">0</span></button>
+    </div>
+
+    <!-- Sorter Navigation -->
+    <div class="project-sorter">
+      <span class="sorter-label" data-es="Ordenar por:" data-en="Sort by:">Ordenar por:</span>
+      <button class="sorter-btn active" data-sort="recent" data-es='<i class="fa-solid fa-calendar-days"></i> Recientes' data-en='<i class="fa-solid fa-calendar-days"></i> Recent'><i class="fa-solid fa-calendar-days"></i> Recientes</button>
+      <button class="sorter-btn" data-sort="stars" data-es='<i class="fa-solid fa-star"></i> Estrellas' data-en='<i class="fa-solid fa-star"></i> Stars'><i class="fa-solid fa-star"></i> Estrellas</button>
+    </div>
+
+    <!-- Grid Container -->
+    <div class="projects-grid" id="projects-grid-container">
+      <!-- Injected by script.js -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="contact-section container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Contacto" data-en="Contact">Contacto</span>
+      <h2 class="section-title" data-es="¡Hablemos!" data-en="Let's Talk!">¡Hablemos!</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Cards -->
+      <div class="contact-info">
+        <div class="contact-card glass-card">
+          <i class="fa-solid fa-envelope info-icon"></i>
+          <div>
+            <h4 data-es="Email" data-en="Email">Email</h4>
+            <p><a href="mailto:david.bueno@uma.es">david.bueno@uma.es</a></p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-card">
+          <i class="fa-solid fa-globe info-icon"></i>
+          <div>
+            <h4 data-es="Web Personal" data-en="Personal Website">Web Personal</h4>
+            <p><a href="https://davidbuenov.com" target="_blank">davidbuenov.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-card">
+          <i class="fa-brands fa-youtube info-icon"></i>
+          <div>
+            <h4 data-es="Canal de YouTube" data-en="YouTube Channel">Canal de YouTube</h4>
+            <p><a href="https://www.youtube.com/@davidbuenov" target="_blank">youtube.com/@davidbuenov</a></p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-card">
+          <i class="fa-brands fa-linkedin-in info-icon"></i>
+          <div>
+            <h4 data-es="Redes de Negocios" data-en="Professional Network">Redes de Negocios</h4>
+            <p><a href="https://www.linkedin.com/in/davidbueno/" target="_blank">linkedin.com/in/davidbueno</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Contact Form -->
+      <form class="contact-form glass-card" id="portfolio-contact-form" action="https://formspree.io/f/xkgbylqw" method="POST">
+        <div class="form-group">
+          <label for="form-name" data-es="Nombre" data-en="Name">Nombre</label>
+          <input type="text" id="form-name" name="name" placeholder="Tu nombre" data-placeholder-es="Tu nombre" data-placeholder-en="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="form-email">Email</label>
+          <input type="email" id="form-email" name="email" placeholder="Tu dirección de correo" data-placeholder-es="Tu dirección de correo" data-placeholder-en="Your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="form-subject" data-es="Asunto" data-en="Subject">Asunto</label>
+          <input type="text" id="form-subject" name="subject" placeholder="Asunto del mensaje" data-placeholder-es="Asunto del mensaje" data-placeholder-en="Subject of the message" required>
+        </div>
+        <div class="form-group">
+          <label for="form-message" data-es="Mensaje" data-en="Message">Mensaje</label>
+          <textarea id="form-message" name="message" rows="5" placeholder="¿Cómo podemos colaborar?" data-placeholder-es="¿Cómo podemos colaborar?" data-placeholder-en="How can we collaborate?" required></textarea>
+        </div>
+        
+        <!-- Honeypot anti-spam & Origin Metadata -->
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="origen" value="davidbuenov.github.io (Portafolio)">
+        
+        <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn" data-es='Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>' data-en='Send Message <i class="fa-solid fa-paper-plane"></i>'>Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p id="footer-copyright" data-es="&copy; 2026 David Bueno Vallejo. Todos los derechos reservados." data-en="&copy; 2026 David Bueno Vallejo. All rights reserved.">&copy; 2026 David Bueno Vallejo. Todos los derechos reservados.</p>
+      <p class="footer-note">
+        <span data-es="Diseñado con estética interactiva y tecnología nativa (HTML/CSS/JS)" data-en="Designed with interactive aesthetics and native technology (HTML/CSS/JS)">Diseñado con estética interactiva y tecnología nativa (HTML/CSS/JS)</span> • <span class="pulse-icon"><i class="fa-solid fa-heart"></i></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
