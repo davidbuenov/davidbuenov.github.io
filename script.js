@@ -191,6 +191,16 @@ function updateUIStrings() {
     }
   });
 
+  // Update GitHub stats locale
+  const statsCard = document.getElementById('github-stats-card');
+  const topLangsCard = document.getElementById('github-top-langs');
+  if (statsCard) {
+    statsCard.src = `https://github-readme-stats-one.vercel.app/api?username=davidbuenov&show_icons=true&theme=tokyonight&bg_color=0c1426&title_color=f7a22b&icon_color=f7a22b&text_color=c9d1d9&hide_border=true&locale=${currentLang}`;
+  }
+  if (topLangsCard) {
+    topLangsCard.src = `https://github-readme-stats-one.vercel.app/api/top-langs?username=davidbuenov&layout=compact&theme=tokyonight&bg_color=0c1426&title_color=f7a22b&icon_color=f7a22b&text_color=c9d1d9&hide_border=true&locale=${currentLang}`;
+  }
+
   // Update filter buttons inner counts correctly by referencing inner elements
   updateFilterCounts();
 }
