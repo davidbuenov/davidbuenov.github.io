@@ -1,5 +1,19 @@
 const projectsData = [
   {
+    name: "dbv-md2word",
+    title_es: "DBV Markdown to Word",
+    title_en: "DBV Markdown to Word",
+    description_es: "Conversor personalizable de Markdown a Word (.docx) con interfaz web local, CLI, GitHub Action y servidor MCP. Genera estilos nativos premium sin depender de Pandoc.",
+    description_en: "Customizable Markdown to Word (.docx) converter with a local web UI, CLI, GitHub Action, and MCP server. Generates premium native styles without relying on Pandoc.",
+    category: "tools",
+    lang: "Python",
+    stars: 0,
+    github: "https://github.com/davidbuenov/dbv-md2word",
+    demo: null,
+    tags: ["Python", "Markdown", "python-docx", "FastAPI", "MCP Server", "GitHub Action"],
+    date: "2026-06-14T09:31:49Z"
+  },
+  {
     name: "dbv-minority-report",
     title_es: "DBV Minority Report",
     title_en: "DBV Minority Report",
